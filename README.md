@@ -48,10 +48,8 @@ internal abstract class BaseGeometrikSekil
         Height = height;
     }
 
-    public virtual double CountArea(int width, int height)
-    {
-        return width * height;
-    }
+    public abstract double CountArea(int width, int height);
+    
 }
 DikUcgen Sınıfı
 DikUcgen, BaseGeometrikSekil sınıfından türetilmiştir ve CountArea metodunu override ederek üçgenin alanını hesaplar.
@@ -67,7 +65,7 @@ internal class DikUcgen : BaseGeometrikSekil
 
     public override double CountArea(int width, int height)
     {
-        return base.CountArea(width, height) / 2;
+        return width*height/ 2;
     }
 }
 Dikdortgen Sınıfı
@@ -84,7 +82,7 @@ internal class Dikdortgen : BaseGeometrikSekil
 
     public override double CountArea(int width, int height)
     {
-        return base.CountArea(width, height);
+        return width*height;
     }
 }
 Kare Sınıfı
@@ -101,7 +99,7 @@ internal class Kare : BaseGeometrikSekil
 
     public override double CountArea(int width, int height)
     {
-        return base.CountArea(width, height);
+        return width*height;
     }
 }
 
