@@ -18,10 +18,8 @@ namespace PolymorphismExample
             Height = height;
         }
         // override edilip kullanılması için virtual tanımı kullanılmıştır.
-        public virtual double CountArea(int width,int height)
-        {
-            return width * height;
-        }
+        public abstract double CountArea(int width,int height);
+       
 
     }
 }
