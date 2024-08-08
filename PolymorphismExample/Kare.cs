@@ -15,7 +15,7 @@ namespace PolymorphismExample
 
         public override double CountArea(int width, int height) // runtime polymorphism örneği oluşturduk
         {
-            return base.CountArea(width, height);
+           return width * height;
         }
     }
 }
